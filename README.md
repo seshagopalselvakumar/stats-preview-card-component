@@ -41,7 +41,7 @@ These are the final screenshots of the built page. I used HTML and SASS, a CSS p
 ### Links
 
 - Solution URL: [https://github.com/seshagopalselvakumar/stats-preview-card-component](https://github.com/seshagopalselvakumar/stats-preview-card-component)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://seshagopalselvakumar.github.io/stats-preview-card-component/](https://seshagopalselvakumar.github.io/stats-preview-card-component/)
 
 ### Built with
 
