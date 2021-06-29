@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+$colors: (
+    mainBackgroundColor:hsl(233, 47%, 7%),
+    cardBackgroundColor:hsl(244, 38%, 16%),
+    accentColor:hsl(277, 64%, 61%),
+    mainHeading:hsl(0, 0%, 100%),
+    mainParagraphColor:hsla(0, 0%, 100%, 0.75),
+    statHeadingColor: hsla(0, 0%, 100%, 0.6)
+);
+
+$fonts: (
+    mainFont: ('Inter', sans-serif),
+    secondaryFont: ('Lexend Deca', sans-serif)
+);
+
+$computerBreakPoint: 1440px;
+
+@function color($color-name){
+    @return map-get($colors, $color-name)
+};
+
+@function font($font-name){
+    @return map-get($fonts, $font-name)
+};
+
+@mixin desktop {
+    @media (min-width: #{$computerBreakPoint}){
+        @content;
+    };
+}
+
+
+body, html {
+    margin: 0;
+    padding:0;
+    height: 100%;
+    background-color: color(mainBackgroundColor);
+    color: color(mainParagraphColor);
+    font-family: font(secondaryFont);
+
+    .container{
+        background-color: color(mainBackgroundColor);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .main-card{
+            width: 80%;
+            border-radius: 10px;
+            background-color: color(cardBackgroundColor);
+            color: color(mainHeading);
+            display: flex;
+            flex-direction: column-reverse;
+
+            @include desktop{
+                flex-direction: row;
+            }
+
+            .purple-overlay{
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                background: color(accentColor);
+
+                @include desktop{
+                    border-top-left-radius: 0;
+                    border-bottom-right-radius: 10px;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                }
+            }
+            
+            #mobile-image{
+                opacity: 0.6;
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+
+                @include desktop{
+                   display: none;
+                }
+            }
+
+            #desktop-image{
+                display: none;
+
+                @include desktop{
+                    opacity: 0.6;
+                    display: block;
+                    // min-width: 100%;
+                    // min-height: 100%
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+            
+
+
+            #text-section{
+                padding: 1.6em;
+                text-align: center;
+
+
+                @include desktop{
+                    padding: 2em 0em 2em 3.5em
+                }
+
+                h1{
+                    font-family: font(mainFont);
+                    font-size: 1.6em;
+                    span{
+                        color: color(accentColor);
+                    }
+
+                    @include desktop{
+                        width: 70%;
+                        font-size: 2.3em;
+                        text-align: left;
+                        // margin-left: 1em;
+                    }
+                }
+                p{
+                    font-size: 0.85em;
+                    line-height: 1.8;
+                    color: color(mainParagraphColor);
+                    font-family: font(secondaryFont);
+
+                    @include desktop{
+                        margin-bottom: 3em;
+                        text-align: left;
+                        font-size: 1em;
+                        width: 70%;
+                        // margin-left: 2.3em;
+                    }
+                }
+
+                ul{
+                    font-family: font(secondaryFont);
+                    color: color(statHeadingColor);
+                    list-style: none;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 0.75em;
+                    text-transform: uppercase;
+
+                    @include desktop{
+                        // margin-top: 5em;
+                        width: 60%;
+                        // margin-left: 3.067em;
+                        flex-direction: row;
+                        justify-content: space-between
+                    }
+
+                    li{
+                        @include desktop{
+                            text-align: left;
+                        }
+                    }
+
+                    h3{
+                        text-transform: initial;
+                        color: color(mainHeading);
+                        font-family: font(mainFont);
+                        font-size: 1.7em;
+                        margin-bottom: 0.2em;
+
+                        @include desktop{
+                            font-size: 2em;
+                        }
+                    }
+
+
+                }
+            }
+        
+        }
+    }
+
+    .attribution{
+        background-color: color(mainBackgroundColor);
+        color: color(mainParagraphColor);
+        font-family: font(secondaryFont);
+        text-align: center;
+        padding: 1em;
+        a{
+            text-decoration: none;
+            color: color(accentColor);
+        }
+    }
+}
+
+

@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #090b1a;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body .container, html .container {
+  background-color: #090b1a;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .main-card, html .container .main-card {
+  width: 80%;
+  border-radius: 10px;
+  background-color: #1b1938;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+@media (min-width: 1440px) {
+  body .container .main-card, html .container .main-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+body .container .main-card .purple-overlay, html .container .main-card .purple-overlay {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #aa5cdb;
+}
+
+@media (min-width: 1440px) {
+  body .container .main-card .purple-overlay, html .container .main-card .purple-overlay {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+body .container .main-card #mobile-image, html .container .main-card #mobile-image {
+  opacity: 0.6;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media (min-width: 1440px) {
+  body .container .main-card #mobile-image, html .container .main-card #mobile-image {
+    display: none;
+  }
+}
+
+body .container .main-card #desktop-image, html .container .main-card #desktop-image {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  body .container .main-card #desktop-image, html .container .main-card #desktop-image {
+    opacity: 0.6;
+    display: block;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+body .container .main-card #text-section, html .container .main-card #text-section {
+  padding: 1.6em;
+  text-align: center;
+}
+
+@media (min-width: 1440px) {
+  body .container .main-card #text-section, html .container .main-card #text-section {
+    padding: 2em 0em 2em 3.5em;
+  }
+}
+
+body .container .main-card #text-section h1, html .container .main-card #text-section h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6em;
+}
+
+body .container .main-card #text-section h1 span, html .container .main-card #text-section h1 span {
+  color: #aa5cdb;
+}
+
+@media (min-width: 1440px) {
+  body .container .main-card #text-section h1, html .container .main-card #text-section h1 {
+    width: 70%;
+    font-size: 2.3em;
+    text-align: left;
+  }
+}
+
+body .container .main-card #text-section p, html .container .main-card #text-section p {
+  font-size: 0.85em;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+@media (min-width: 1440px) {
+  body .container .main-card #text-section p, html .container .main-card #text-section p {
+    margin-bottom: 3em;
+    text-align: left;
+    font-size: 1em;
+    width: 70%;
+  }
+}
+
+body .container .main-card #text-section ul, html .container .main-card #text-section ul {
+  font-family: "Lexend Deca", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 0.75em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1440px) {
+  body .container .main-card #text-section ul, html .container .main-card #text-section ul {
+    width: 60%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1440px) {
+  body .container .main-card #text-section ul li, html .container .main-card #text-section ul li {
+    text-align: left;
+  }
+}
+
+body .container .main-card #text-section ul h3, html .container .main-card #text-section ul h3 {
+  text-transform: initial;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 1.7em;
+  margin-bottom: 0.2em;
+}
+
+@media (min-width: 1440px) {
+  body .container .main-card #text-section ul h3, html .container .main-card #text-section ul h3 {
+    font-size: 2em;
+  }
+}
+
+body .attribution, html .attribution {
+  background-color: #090b1a;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  text-align: center;
+  padding: 1em;
+}
+
+body .attribution a, html .attribution a {
+  text-decoration: none;
+  color: #aa5cdb;
+}
+/*# sourceMappingURL=main.css.map */
